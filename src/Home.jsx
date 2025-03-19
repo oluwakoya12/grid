@@ -19,7 +19,7 @@ function Home() {
       {/* Responsive Heading - Split Words on Small Screens */}
       <h5 className="text-5xl sm:text-5xl md:text-[73px] font-bold mt-2 sm:mt-4 md:mt-6 leading-none">
         {/* Show "WEBSITE UNDER" as block (stacked) on small screens */}
-        <span className="text-[#D07A1D] font-[Staatliches] block sm:block md:inline">WEBSITE UNDER</span>
+        <div className="text-[#D07A1D] font-[Staatliches] block sm:block md:inline">WEBSITE <span className='text-white font-[Staatliches]'>UNDER</span></div>
         {/* Show "CONSTRUCTION" on a new line only on sm screens */}
         <span className="font-[Staatliches] ml-3 block sm:block md:inline">CONSTRUCTION</span>
       </h5>
