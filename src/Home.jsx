@@ -7,8 +7,8 @@ function Home() {
     <div className="flex flex-col items-center justify-between min-h-screen bg-[#1C1C1C] text-white text-center px-6 sm:px-8 pt-2 pb-6">
       
       {/* Logo - Responsive Spacing */}
-      <div className="w-full flex justify-center mt-[20px] md:justify-start md:pl-10 mb-[30px] sm:mb-[40px] md:mb-[50px]">
-        <img src={Logo} className="w-[200px] sm:w-[250px] md:w-[269.91px] h-auto" alt="gridograph logo" />
+      <div className="w-full flex justify-center mt-2 md:justify-start md:pl-10 mb-[30px] sm:mb-[40px] md:mb-[50px]">
+        <img src={Logo} className="w-[150px] sm:w-[250px] md:w-[269.91px] h-auto" alt="gridograph logo" />
       </div>
 
       {/* Construction Image - Responsive Width */}
@@ -16,9 +16,12 @@ function Home() {
         <img src={Construction} className="w-[300px] sm:w-[400px] md:w-[565.49px] h-auto" alt="gridograph construction" />
       </div>
 
-      {/* Responsive Heading */}
-      <h5 className="text-2xl sm:text-3xl md:text-[73px] font-bold mt-2 sm:mt-4 md:mt-6 leading-none">
-        <span className="text-[#D07A1D] font-[Staatliches]">WEBSITE</span> UNDER CONSTRUCTION
+      {/* Responsive Heading - Split Words on Small Screens */}
+      <h5 className="text-5xl sm:text-5xl md:text-[73px] font-bold mt-2 sm:mt-4 md:mt-6 leading-none">
+        {/* Show "WEBSITE UNDER" as block (stacked) on small screens */}
+        <span className="text-[#D07A1D] font-[Staatliches] block sm:block md:inline">WEBSITE UNDER</span>
+        {/* Show "CONSTRUCTION" on a new line only on sm screens */}
+        <span className="font-[Staatliches] ml-3 block sm:block md:inline">CONSTRUCTION</span>
       </h5>
 
       {/* Contact Us Button */}
@@ -29,7 +32,9 @@ function Home() {
       </a>
 
       {/* Tagline - Responsive Margin */}
-      <div className="mt-6 sm:mt-8 mb-2 text-base font-bold sm:text-lg">YOUR WALL, YOUR STORY, <span className="text-[#D07A1D]">PERFECTLY FRAMED</span></div>
+      <div className="mt-6 sm:mt-8 mb-2 text-base sm:text-lg">
+        YOUR WALL, YOUR STORY, <span className="text-[#D07A1D]">PERFECTLY FRAMED</span>
+      </div>
     </div>
   );
 }
